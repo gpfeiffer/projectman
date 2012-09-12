@@ -27,4 +27,5 @@
 
 
 <%= link_to 'Edit', edit_lecturer_path(@lecturer) %> |
-<%= link_to 'Back', lecturers_path %>
+<%= link_to 'Back', lecturers_path %> |
+<%= link_to 'Delete', @lecturer, :confirm => 'Are you sure?', :method => :delete %>
