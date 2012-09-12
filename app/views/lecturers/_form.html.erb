@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.select :title, TITLES, :include_blank => true %>
   </div>
   <div class="field">
     <%= f.label :first %><br />
@@ -28,8 +28,8 @@
     <%= f.text_field :home_url %>
   </div>
   <div class="field">
-    <%= f.label :discipline %><br />
-    <%= f.text_field :discipline %>
+    <%= f.label :school %><br />
+    <%= f.select :discipline, DISCIPLINES, :include_blank => true %>
   </div>
   <div class="actions">
     <%= f.submit %>

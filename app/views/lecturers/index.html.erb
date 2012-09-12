@@ -4,8 +4,8 @@
 
 <% @lecturers.each do |lecturer| %>
   <tr>
+    <td><%= link_to '[Home]', lecturer.home_url %></td>
     <td><%= link_to lecturer.full_name, lecturer %></td>
-    <td><%= link_to 'Home', lecturer.home_url %></td>
     <td><%= lecturer.discipline %></td>
   </tr>
 <% end %>

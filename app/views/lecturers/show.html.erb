@@ -1,27 +1,16 @@
 <p id="notice"><%= notice %></p>
 
+<h2>
+  <%= @lecturer.full_name %>
+</h2>
+
 <p>
-  <b>Title:</b>
-  <%= @lecturer.title %>
+  <b>Home Page:</b>
+  <%= link_to nil, @lecturer.home_url %>
 </p>
 
 <p>
-  <b>First:</b>
-  <%= @lecturer.first %>
-</p>
-
-<p>
-  <b>Last:</b>
-  <%= @lecturer.last %>
-</p>
-
-<p>
-  <b>Home url:</b>
-  <%= @lecturer.home_url %>
-</p>
-
-<p>
-  <b>Discipline:</b>
+  <b>School:</b>
   <%= @lecturer.discipline %>
 </p>
 
