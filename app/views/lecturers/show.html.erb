@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @lecturer.title %>
+</p>
+
+<p>
+  <b>First:</b>
+  <%= @lecturer.first %>
+</p>
+
+<p>
+  <b>Last:</b>
+  <%= @lecturer.last %>
+</p>
+
+<p>
+  <b>Home url:</b>
+  <%= @lecturer.home_url %>
+</p>
+
+<p>
+  <b>Discipline:</b>
+  <%= @lecturer.discipline %>
+</p>
+
+
+<%= link_to 'Edit', edit_lecturer_path(@lecturer) %> |
+<%= link_to 'Back', lecturers_path %>
