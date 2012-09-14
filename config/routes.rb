@@ -1,4 +1,6 @@
 Projectman::Application.routes.draw do
+  resources :projects
+
   resources :students
 
   get "home/index"
