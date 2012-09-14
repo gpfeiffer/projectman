@@ -1,19 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>First:</b>
-  <%= @student.first %>
-</p>
-
-<p>
-  <b>Last:</b>
-  <%= @student.last %>
-</p>
-
-<p>
-  <b>Registration:</b>
-  <%= @student.registration %>
-</p>
+<h2>
+  <%= @student.full_name %>
+</h2>
 
 <p>
   <b>Programme:</b>
@@ -27,4 +16,5 @@
 
 
 <%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Back', students_path %>
+<%= link_to 'Back', students_path %> |
+<%= link_to 'Delete', @student, :confirm => 'Are you sure?', :method => :delete %>
