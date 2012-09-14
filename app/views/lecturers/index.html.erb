@@ -1,16 +1,19 @@
-<h1>Lecturers</h1>
+<h1>Project Supervisors.</h1>
+
+<% @lecturers_by_discipline.each do |discipline, lecturers| %>
+
+<h2><%= if discipline.blank? then "Other" else discipline end %></h2>
 
 <table>
-
-<% @lecturers.each do |lecturer| %>
+<% lecturers.each do |lecturer| %>
   <tr>
     <td><%= link_to lecturer.full_name, lecturer %></td>
-    <td>(<%= lecturer.discipline %>)</td>
     <td>&lt;<%= lecturer.nuig_mail %>@nuigalway.ie&gt;</td>
     <td><%= link_to '[Home]', lecturer.home_url %></td>
   </tr>
 <% end %>
 </table>
+<% end %>
 
 <br />
 

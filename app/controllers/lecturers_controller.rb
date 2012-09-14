@@ -3,6 +3,7 @@ class LecturersController < ApplicationController
   # GET /lecturers.xml
   def index
     @lecturers = Lecturer.all
+    @lecturers_by_discipline = @lecturers.group_by(&:discipline).sort.reverse
 
     respond_to do |format|
       format.html # index.html.erb
