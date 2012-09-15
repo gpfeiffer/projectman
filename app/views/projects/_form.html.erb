@@ -20,6 +20,11 @@
     <%= f.text_field :title %>
   </div>
 
+  <div class="field">
+    <%= f.label :supervisor %><br />
+    <%= f.select :supervisor, Lecturer.all.map{ |x| [x.full_name, x.id] }, :selected => (@project.supervisor.id if @project.supervisor), :include_blank => true %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

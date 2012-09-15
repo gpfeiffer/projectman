@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Lecturer:</b>
+  <%= @supervision.lecturer_id %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @supervision.project_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_supervision_path(@supervision) %> |
+<%= link_to 'Back', supervisions_path %>

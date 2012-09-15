@@ -41,7 +41,10 @@ class ProjectsController < ApplicationController
   # POST /projects
   # POST /projects.xml
   def create
+    supervisor = Lecturer.find(params[:project][:supervisor])
+    params[:project].delete(:supervisor)
     @project = Project.new(params[:project])
+    @project.supervision = Supervision.new(:project => @project, :lecturer => supervisor)
 
     respond_to do |format|
       if @project.save
@@ -57,7 +60,10 @@ class ProjectsController < ApplicationController
   # PUT /projects/1
   # PUT /projects/1.xml
   def update
+    supervisor = Lecturer.find(params[:project][:supervisor])
+    params[:project].delete(:supervisor)
     @project = Project.find(params[:id])
+    @project.supervisor = supervisor
 
     respond_to do |format|
       if @project.update_attributes(params[:project])
@@ -77,7 +83,7 @@ class ProjectsController < ApplicationController
     @project.destroy
 
     respond_to do |format|
-      format.html { redirect_to(projects_url) }
+      format.html { redirect_to(@project.student) }
       format.xml  { head :ok }
     end
   end

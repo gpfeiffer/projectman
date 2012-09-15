@@ -4,4 +4,8 @@ class Student < ActiveRecord::Base
   def full_name
     "#{registration}: #{last}, #{first}"
   end
+
+  def to_s
+    full_name
+  end
 end
