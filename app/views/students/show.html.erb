@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<h4>Project Students.</h4>
+
 <h2>
   <%= @student.full_name %>
 </h2>
@@ -14,6 +16,15 @@
   <%= @student.email %>
 </p>
 
+<h3>Projects.</h3>
+
+<ol>
+<%= render @student.projects %>
+</ol>
+
+<%= link_to 'New Project', new_project_path(:student_id => @student) %>
+
+<hr/>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |
 <%= link_to 'Back', students_path %> |

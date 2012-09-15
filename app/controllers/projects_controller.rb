@@ -25,6 +25,7 @@ class ProjectsController < ApplicationController
   # GET /projects/new.xml
   def new
     @project = Project.new
+    @project[:student_id] = params[:student_id]
 
     respond_to do |format|
       format.html # new.html.erb

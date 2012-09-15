@@ -1,15 +1,18 @@
 <p id="notice"><%= notice %></p>
 
+<h4>Student Project.</h4>
+
+<h2>
+  <%= @project.student.full_name %>
+</h2>
+
 <p>
   <b>Title:</b>
   <%= @project.title %>
 </p>
 
-<p>
-  <b>Student:</b>
-  <%= @project.student_id %>
-</p>
-
+<hr/>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<%= link_to 'Back', @project.student %> |
+<%= link_to 'Delete', @project, :confirm => 'Are you sure?', :method => :delete %>

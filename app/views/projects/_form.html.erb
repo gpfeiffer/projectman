@@ -11,14 +11,15 @@
     </div>
   <% end %>
 
+  <h3><%= @project.student.full_name %></h3>
+
+  <%= f.hidden_field :student_id %>
+
   <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>
-  <div class="field">
-    <%= f.label :student_id %><br />
-    <%= f.text_field :student_id %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

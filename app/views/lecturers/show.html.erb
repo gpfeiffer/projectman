@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<h4>Project Supervisors.</h4>
+
 <h2>
   <%= @lecturer.full_name %>
 </h2>
@@ -19,7 +21,7 @@
   <%= @lecturer.discipline %>
 </p>
 
-
+<hr/>
 <%= link_to 'Edit', edit_lecturer_path(@lecturer) %> |
 <%= link_to 'Back', lecturers_path %> |
 <%= link_to 'Delete', @lecturer, :confirm => 'Are you sure?', :method => :delete %>
