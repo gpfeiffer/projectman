@@ -1,4 +1,6 @@
 Projectman::Application.routes.draw do
+  resources :supervisions
+
   resources :projects
 
   resources :students
