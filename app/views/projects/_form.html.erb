@@ -21,8 +21,13 @@
   </div>
 
   <div class="field">
-    <%= f.label :supervisor %><br />
-    <%= f.select :supervisor, Lecturer.all.map{ |x| [x.full_name, x.id] }, :selected => (@project.supervisor.id if @project.supervisor), :include_blank => true %>
+    <%= label_tag :supervisor_id %><br />
+    <%= select_tag :supervisor_id, 
+      options_from_collection_for_select(Lecturer.all, 
+        :id, 
+        :full_name, 
+        :selected => (@project.supervisor.id if @project.supervisor)), 
+      :include_blank => true %>
   </div>
 
   <div class="actions">

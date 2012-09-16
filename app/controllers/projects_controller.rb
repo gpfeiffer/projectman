@@ -41,8 +41,7 @@ class ProjectsController < ApplicationController
   # POST /projects
   # POST /projects.xml
   def create
-    supervisor = Lecturer.find(params[:project][:supervisor])
-    params[:project].delete(:supervisor)
+    supervisor = Lecturer.find(params[:supervisor_id])
     @project = Project.new(params[:project])
     @project.supervision = Supervision.new(:project => @project, :lecturer => supervisor)
 
@@ -60,8 +59,7 @@ class ProjectsController < ApplicationController
   # PUT /projects/1
   # PUT /projects/1.xml
   def update
-    supervisor = Lecturer.find(params[:project][:supervisor])
-    params[:project].delete(:supervisor)
+    supervisor = Lecturer.find(params[:supervisor_id])
     @project = Project.find(params[:id])
     @project.supervisor = supervisor
 
