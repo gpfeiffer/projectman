@@ -2,8 +2,8 @@
 
 one:
   title: MyString
-  student_id: 1
+  student: one
 
 two:
   title: MyString
-  student_id: 1
+  student: two

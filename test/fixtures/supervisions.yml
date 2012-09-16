@@ -1,9 +1,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  lecturer_id: 1
-  project_id: 1
+  lecturer: one
+  project: one
 
 two:
-  lecturer_id: 1
-  project_id: 1
+  lecturer: two
+  project: two
