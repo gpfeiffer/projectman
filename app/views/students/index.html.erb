@@ -3,7 +3,7 @@
 <table>
 <% @students.each do |student| %>
   <tr>
-    <td><%= link_to student.full_name, student %></td>
+    <td><%= link_to student, student %></td>
     <td><%= student.programme %></td>
     <td>&lt;<%= student.email %>&gt;</td>
   </tr>

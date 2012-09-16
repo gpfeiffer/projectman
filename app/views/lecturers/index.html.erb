@@ -7,7 +7,7 @@
 <table>
 <% lecturers.each do |lecturer| %>
   <tr>
-    <td><%= link_to lecturer.full_name, lecturer %></td>
+    <td><%= link_to lecturer, lecturer %></td>
     <td>&lt;<%= lecturer.nuig_mail %>@nuigalway.ie&gt;</td>
     <td><%= link_to '[Home]', lecturer.home_url %></td>
   </tr>

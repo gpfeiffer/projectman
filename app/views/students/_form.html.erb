@@ -11,26 +11,49 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :first %><br />
-    <%= f.text_field :first %>
-  </div>
-  <div class="field">
-    <%= f.label :last %><br />
-    <%= f.text_field :last %>
-  </div>
-  <div class="field">
-    <%= f.label :registration %><br />
-    <%= f.text_field :registration %>
-  </div>
-  <div class="field">
-    <%= f.label :programme %><br />
-    <%= f.select :programme, PROGRAMMES %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
+  <table>
+    <div class="field">
+      <tr>
+	<td>
+          <%= f.label :first, "First Name" %>
+	</td>
+	<td>
+          <%= f.text_field :first %>
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  <%= f.label :last, "Last Name" %>
+	</td>
+	<td>
+	  <%= f.text_field :last %>
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  <%= f.label :registration %>
+	</td>
+	<td>
+	  <%= f.text_field :registration %>
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  <%= f.label :programme %>
+	</td>
+	<td>
+	  <%= f.select :programme, PROGRAMMES, :include_blank => true %>
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  <%= f.label :email %>
+	</td>
+	<td>
+	  <%= f.text_field :email %>
+	</td>
+      </tr>
+  </table>
   <div class="actions">
     <%= f.submit %>
   </div>
