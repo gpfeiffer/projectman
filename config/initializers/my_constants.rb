@@ -12,6 +12,7 @@ PROGRAMMES = [
 DISCIPLINES = [
   'Economics',
   'Mathematics',
+  '(On Leave)',
 ]
 
 TITLES = [
